@@ -10,7 +10,8 @@ public class problema {
 		Scanner sc = new Scanner(System.in);
 		
 		String nome;
-		double salario;
+		double salario, total;
+		int prestacoes, entrada;
 		
 		System.out.println("DIGITE OS DADOS DO FINANCIAMENTO");
 		System.out.print("Nome do cliente: ");
@@ -21,7 +22,16 @@ public class problema {
 			System.out.print("Salario: ");
 			salario = sc.nextDouble();
 		}
-		
+		System.out.print("Numero de prestacoes: ");
+		prestacoes = sc.nextInt();
+		System.out.print("Porcentagem de entrada: ");
+		entrada = sc.nextInt();
+		System.out.print("Valor total financiado: ");
+		total = sc.nextDouble();
+		while ((total / prestacoes) < (salario * 0.3)){
+			System.out.print("Valor total financiado: ");
+			total = sc.nextDouble();
+		}
 		
 		
 		sc.close();
